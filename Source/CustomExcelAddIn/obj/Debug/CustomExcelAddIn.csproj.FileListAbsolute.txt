@@ -1,0 +1,13 @@
+C:\BLKDeveloper\BBGWizard\ExcelWizardLikeGUIs\Source\CustomExcelAddIn\bin\Debug\ribbon.xml
+C:\BLKDeveloper\BBGWizard\ExcelWizardLikeGUIs\Source\CustomExcelAddIn\bin\Debug\CustomExcelAddIn.dll
+C:\BLKDeveloper\BBGWizard\ExcelWizardLikeGUIs\Source\CustomExcelAddIn\bin\Debug\CustomExcelAddIn.pdb
+C:\BLKDeveloper\BBGWizard\ExcelWizardLikeGUIs\Source\CustomExcelAddIn\bin\Debug\ExcelApi.dll
+C:\BLKDeveloper\BBGWizard\ExcelWizardLikeGUIs\Source\CustomExcelAddIn\bin\Debug\ExcelDna.Integration.dll
+C:\BLKDeveloper\BBGWizard\ExcelWizardLikeGUIs\Source\CustomExcelAddIn\bin\Debug\NetOffice.dll
+C:\BLKDeveloper\BBGWizard\ExcelWizardLikeGUIs\Source\CustomExcelAddIn\bin\Debug\OfficeApi.dll
+C:\BLKDeveloper\BBGWizard\ExcelWizardLikeGUIs\Source\CustomExcelAddIn\bin\Debug\VBIDEApi.dll
+C:\BLKDeveloper\BBGWizard\ExcelWizardLikeGUIs\Source\CustomExcelAddIn\obj\Debug\CustomExcelAddIn.csprojResolveAssemblyReference.cache
+C:\BLKDeveloper\BBGWizard\ExcelWizardLikeGUIs\Source\CustomExcelAddIn\obj\Debug\CustomExcelAddIn.CustomForm.resources
+C:\BLKDeveloper\BBGWizard\ExcelWizardLikeGUIs\Source\CustomExcelAddIn\obj\Debug\CustomExcelAddIn.csproj.GenerateResource.Cache
+C:\BLKDeveloper\BBGWizard\ExcelWizardLikeGUIs\Source\CustomExcelAddIn\obj\Debug\CustomExcelAddIn.dll
+C:\BLKDeveloper\BBGWizard\ExcelWizardLikeGUIs\Source\CustomExcelAddIn\obj\Debug\CustomExcelAddIn.pdb
