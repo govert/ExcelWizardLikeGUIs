@@ -90,6 +90,11 @@ namespace CustomExcelAddIn
             thread.Start();
         }
 
+        public void OnCheckBoxPressed1(IRibbonControl control, bool pressed)
+        {
+            CustomForm.overrideWindowStyles = pressed;
+        }
+
         public override string GetCustomUI(string uiName)
         {
             return File.ReadAllText("ribbon.xml");

@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <StartAction>Program</StartAction>
-    <StartProgram>C:\Program Files\Microsoft Office 15\root\office15\EXCEL.EXE</StartProgram>
-    <StartArguments>/x CustomExcelAddIn.xll</StartArguments>
+    <StartProgram>C:\Program Files (x86)\Microsoft Office\Office14\EXCEL.EXE</StartProgram>
+    <StartArguments>CustomExcelAddIn.xll</StartArguments>
   </PropertyGroup>
 </Project>

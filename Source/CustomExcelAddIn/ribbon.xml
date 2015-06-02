@@ -2,7 +2,7 @@
   <ribbon>
     <tabs>
       <tab id='CustomExcelAddInTab' label='CustomExcelAddIn'>
-        <group id='CustomExcelAddInGroup' label='First group'>
+        <group id='CustomExcelAddInGroup1' label='Tests'>
           <button id='Button1' label='Call Show from Excel thread' onAction='OnButtonPressed1'/>
           <button id='Button2' label='Call ShowDialog from Excel thread' onAction='OnButtonPressed2'/>
           <button id='Button3' label='Call Show from separate thread' onAction='OnButtonPressed3'/>
@@ -11,6 +11,9 @@
           <button id='Button6' label='Call ShowDialog from Excel thread passing IWin32Window' onAction='OnButtonPressed6'/>
           <button id='Button7' label='Call Show from separate thread passing IWin32Window' onAction='OnButtonPressed7'/>
           <button id='Button8' label='Call ShowDialog from separate thread passing IWin32Window' onAction='OnButtonPressed8'/>
+        </group >
+        <group id='CustomExcelAddInGroup2' label='Config'>
+          <checkBox id='checkbox1' label='Use Custom Window Style' onAction='OnCheckBoxPressed1'/>
         </group >
       </tab>
     </tabs>
