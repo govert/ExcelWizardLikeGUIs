@@ -11,9 +11,11 @@
           <button id='Button6' label='Call ShowDialog from Excel thread passing IWin32Window' onAction='OnButtonPressed6'/>
           <button id='Button7' label='Call Show from separate thread passing IWin32Window' onAction='OnButtonPressed7'/>
           <button id='Button8' label='Call ShowDialog from separate thread passing IWin32Window' onAction='OnButtonPressed8'/>
+          <button id='Button9' label='Call Show from Excel thread passing IWin32Window : active workbook' onAction='OnButtonPressed9'/>
         </group >
         <group id='CustomExcelAddInGroup2' label='Config'>
           <checkBox id='checkbox1' label='Use Custom Window Style' onAction='OnCheckBoxPressed1'/>
+          <checkBox id='checkbox2' label='Track Mouse' onAction='OnCheckBoxPressed2'/>
         </group >
       </tab>
     </tabs>

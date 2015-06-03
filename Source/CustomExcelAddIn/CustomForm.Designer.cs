@@ -54,13 +54,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 73);
+            this.ClientSize = new System.Drawing.Size(439, 93);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AddressBox);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(451, 111);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(451, 111);
             this.Name = "CustomForm";
             this.Text = "CustomForm";
             this.ResumeLayout(false);

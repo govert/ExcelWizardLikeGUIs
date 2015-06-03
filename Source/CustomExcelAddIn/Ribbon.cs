@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Runtime.InteropServices;
+using System.Text;
 using System.Threading;
 using ExcelDna.Integration;
 using ExcelDna.Integration.CustomUI;
@@ -12,6 +13,7 @@ namespace CustomExcelAddIn
     public class MyRibbon : ExcelRibbon
     {
         private readonly Application application;
+        private bool trackMouse;
 
         public MyRibbon()
         {
@@ -46,7 +48,7 @@ namespace CustomExcelAddIn
         {
             Thread thread = new Thread(() =>
             {
-                CustomForm form = new CustomForm(application);
+                CustomForm form = new CustomForm(application, trackMouse);
                 form.ShowDialog();
             });
 
@@ -90,9 +92,50 @@ namespace CustomExcelAddIn
             thread.Start();
         }
 
+        private delegate bool EnumWindowsCallback(IntPtr hwnd, IntPtr param);
+
+        [DllImport("user32.dll")]
+        private static extern bool EnumChildWindows(IntPtr hWndParent, EnumWindowsCallback callback, IntPtr param);
+
+        [DllImport("user32.dll")]
+        private static extern int GetClassNameW(IntPtr hwnd, [MarshalAs(UnmanagedType.LPWStr)] StringBuilder buf, int nMaxCount);
+
+        private static IntPtr FindWorkbookWindow(IntPtr mainWindowHandle)
+        {
+            IntPtr hWndChild = IntPtr.Zero;
+
+            StringBuilder cname = new StringBuilder(256);
+            EnumChildWindows(mainWindowHandle, delegate(IntPtr hWndEnum, IntPtr param)
+            {
+                GetClassNameW(hWndEnum, cname, cname.Capacity);
+                if (cname.ToString() == "EXCEL7")
+                {
+                    hWndChild = hWndEnum;
+                    return false;
+                }
+                return true;
+            }, IntPtr.Zero);
+
+            return hWndChild;
+        }
+
+        public void OnButtonPressed9(IRibbonControl control)
+        {
+            CustomForm form = new CustomForm(application);
+
+            IntPtr hWndChild = FindWorkbookWindow(new IntPtr(application.Hwnd));
+
+            form.Show(new Win32Window(hWndChild));
+        }
+
         public void OnCheckBoxPressed1(IRibbonControl control, bool pressed)
         {
             CustomForm.overrideWindowStyles = pressed;
+        }
+
+        public void OnCheckBoxPressed2(IRibbonControl control, bool pressed)
+        {
+            trackMouse = pressed;
         }
 
         public override string GetCustomUI(string uiName)
