@@ -13,7 +13,6 @@ namespace CustomExcelAddIn
     public class MyRibbon : ExcelRibbon
     {
         private readonly Application application;
-        private bool trackMouse;
 
         public MyRibbon()
         {
@@ -44,11 +43,16 @@ namespace CustomExcelAddIn
             thread.Start();
         }
 
+        [DllImport("kernel32.dll")]
+        public static extern int GetCurrentThreadId();
+
         public void OnButtonPressed4(IRibbonControl control)
         {
+            int id = GetCurrentThreadId();
+
             Thread thread = new Thread(() =>
             {
-                CustomForm form = new CustomForm(application, trackMouse);
+                CustomForm form = new CustomForm(application, id);
                 form.ShowDialog();
             });
 
@@ -131,11 +135,6 @@ namespace CustomExcelAddIn
         public void OnCheckBoxPressed1(IRibbonControl control, bool pressed)
         {
             CustomForm.overrideWindowStyles = pressed;
-        }
-
-        public void OnCheckBoxPressed2(IRibbonControl control, bool pressed)
-        {
-            trackMouse = pressed;
         }
 
         public override string GetCustomUI(string uiName)

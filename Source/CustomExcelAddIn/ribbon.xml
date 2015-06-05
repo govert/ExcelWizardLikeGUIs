@@ -15,7 +15,6 @@
         </group >
         <group id='CustomExcelAddInGroup2' label='Config'>
           <checkBox id='checkbox1' label='Use Custom Window Style' onAction='OnCheckBoxPressed1'/>
-          <checkBox id='checkbox2' label='Track Mouse' onAction='OnCheckBoxPressed2'/>
         </group >
       </tab>
     </tabs>

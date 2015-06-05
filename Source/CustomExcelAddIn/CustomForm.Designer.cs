@@ -30,6 +30,7 @@
         {
             this.AddressBox = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // AddressBox
@@ -50,11 +51,19 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Focus on the text box below and then select a range in Excel";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(4, 96);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(219, 20);
+            this.textBox1.TabIndex = 2;
+            // 
             // CustomForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 93);
+            this.ClientSize = new System.Drawing.Size(439, 178);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AddressBox);
             this.MaximizeBox = false;
@@ -70,5 +79,6 @@
 
         private System.Windows.Forms.RichTextBox AddressBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
