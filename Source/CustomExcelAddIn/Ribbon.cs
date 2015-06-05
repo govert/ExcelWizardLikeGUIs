@@ -48,14 +48,13 @@ namespace CustomExcelAddIn
 
         public void OnButtonPressed4(IRibbonControl control)
         {
-            int id = GetCurrentThreadId();
-
+            int idx = GetCurrentThreadId();
             Thread thread = new Thread(() =>
             {
-                CustomForm form = new CustomForm(application, id);
+
+                CustomForm form = new CustomForm(application, idx);
                 form.ShowDialog();
             });
-
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
         }
